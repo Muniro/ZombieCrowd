@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 #endif
 
-public class MouseLook : MonoBehaviour
+public class PlayerMouseLook : MonoBehaviour
 {
     [SerializeField] private Transform playerBody;
     [SerializeField] private float sensitivity = 0.1f;
@@ -24,8 +24,13 @@ public class MouseLook : MonoBehaviour
         verticalLook -= mouseMovement.y;
         verticalLook = Mathf.Clamp(verticalLook, -80f, 80f);
 
-        transform.localRotation = Quaternion.Euler(verticalLook, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseMovement.x);
+        transform.localRotation =
+            Quaternion.Euler(verticalLook, 0f, 0f);
+
+        if (playerBody != null)
+        {
+            playerBody.Rotate(Vector3.up * mouseMovement.x);
+        }
     }
 
     private Vector2 ReadMouseMovement()
@@ -37,7 +42,8 @@ public class MouseLook : MonoBehaviour
 #else
         return new Vector2(
             Input.GetAxis("Mouse X"),
-            Input.GetAxis("Mouse Y")) * sensitivity * 10f;
+            Input.GetAxis("Mouse Y")
+        ) * sensitivity * 10f;
 #endif
     }
 }
