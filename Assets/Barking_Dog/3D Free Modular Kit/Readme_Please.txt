@@ -16,7 +16,7 @@ PS : And do not forget to write a review/stars on the Unity Store :)
 
 If you like this kind of product, take a look on my line up, on the Unity Store : 
 
-Website : http://blitz3dfr.free.fr
+Website : https://www.creepycat.fr/#about
 
 Store Barking Dog : https://assetstore.unity.com/publishers/21180
 Store Creepy Cat : https://assetstore.unity.com/publishers/9029
