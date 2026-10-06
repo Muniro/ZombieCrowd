@@ -10,7 +10,7 @@ public class CreatureChase : MonoBehaviour
     [Header("Player")]
     [SerializeField] private Transform target;
     [SerializeField] private float detectionDistance = 30f;
-    [SerializeField] private float caughtDistance = 1.4f;
+    [SerializeField] private float caughtDistance = 2.0f;
 
     [Header("Patrol")]
     [SerializeField] private Transform[] patrolPoints;
